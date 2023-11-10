@@ -4,20 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DettaglioComponent } from './dettaglio/dettaglio.component';
+import { ListShowComponent } from './list-show/list-show.component';
 import { HomeComponent } from './home/home.component';
 import { ApiService } from './_services/api.service';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DettaglioComponent
+    ListShowComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
