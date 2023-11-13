@@ -8,20 +8,24 @@ import { ListShowComponent } from '../list-show/list-show.component';
 })
 export class SearchBarComponent implements OnInit {
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    ) {}
 
   jsonIn = {
     title: ''
   }
 
   ngOnInit(): void {
-   
+    /* handleClick(event: any){
+      this.
+    } */
   }
-
+/* 
   searchShowByTitle(){
       this.api.searchShow(this.title? this.title : '' ).subscribe( (shows) => {
       this.shows = shows;
       console.log(this.shows)
     });
-  }
+  } */
 }

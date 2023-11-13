@@ -1,13 +1,12 @@
-<div class="container">
+<div class="container w-50">
     <div class="row">
         <ng-container *ngFor="let show of shows">
-            <div class="card col-6 p-3">
-                <img [src]="show.image.original" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{show.name}}</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
+            <img *ngIf="show.image != null" src="{{show.image.original}}" alt="...">
+            <img *ngIf="show.image == null" src="https://static.tvmaze.com/images/no-img/no-img-portrait-text.png" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{show.name}}</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </ng-container>
     </div>

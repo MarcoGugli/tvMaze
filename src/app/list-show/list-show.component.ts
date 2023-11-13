@@ -21,6 +21,10 @@ export class ListShowComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.title = params.get('title');
+
+      this.api.searchShow(this.title? this.title : '').subscribe((response: any) => {
+        this.shows = response;
+      })
     });
   }
 
